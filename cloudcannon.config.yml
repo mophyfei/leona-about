@@ -1,6 +1,4 @@
-# CloudCannon Configuration
-# 讓 CloudCannon 對單一 HTML 網頁啟用 Visual Editor
-
+# CloudCannon Configuration for Visual Editing
 editor:
   source_editor: true
   visual_editor: true
