@@ -1,4 +1,5 @@
 # CloudCannon Configuration for Visual Editing
+# 這份設定讓 CloudCannon 預設以 Visual Editor 編輯 index.html
 editor:
   source_editor: true
   visual_editor: true
