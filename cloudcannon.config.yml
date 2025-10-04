@@ -1,0 +1,11 @@
+# CloudCannon Configuration
+# 讓 CloudCannon 對單一 HTML 網頁啟用 Visual Editor
+
+editor:
+  source_editor: true
+  visual_editor: true
+
+inputs:
+  - type: html
+    path: index.html
+    editor: visual
