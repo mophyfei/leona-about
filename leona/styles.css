@@ -1,0 +1,140 @@
+:root {
+  --main-green: #9BBF9E;
+  --rose: #F3D9D5;
+  --beige: #FAF7F2;
+  --gold: #D8C7A3;
+  --text: #333;
+  --hero-bg: url("images/bg.png");
+}
+
+body {
+  margin: 0;
+  font-family: "Noto Sans TC", sans-serif;
+  color: var(--text);
+  background: var(--beige);
+}
+
+.page-wrapper {
+  background: var(--hero-bg) center/cover no-repeat fixed;
+  backdrop-filter: blur(4px);
+  animation: fadeIn 2.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 2s ease forwards;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* Hero 區調整 ★ */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: rgba(255,255,255,0.8);
+}
+
+.hero-text h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2rem;
+  color: var(--main-green);
+  margin-bottom: 1rem;
+}
+
+.hero-photo img {
+  width: 200px;              /* ★ 從 250px 改為 200px */
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  margin-top: 1rem;
+  margin-left: 1.5rem;       /* ★ 拉開與文字距離 */
+}
+
+/* Sections */
+section {
+  background: rgba(255,255,255,0.85);
+  margin: 2rem auto;
+  border-radius: 20px;
+  max-width: 900px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+section h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: var(--main-green);
+}
+
+section p {
+  line-height: 1.8;
+  white-space: pre-line;
+}
+
+/* Gallery */
+.gallery {
+  margin-top: 1rem;
+}
+
+/* ★ 手機圖片防破版 */
+.gallery img {
+  width: 100%;
+  max-width: 100%;       /* ★ 限制橫向圖不超出容器 */
+  height: auto;          /* ★ 自動縮放比例 */
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* CTA */
+.contact .cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.btn {
+  background: var(--main-green);
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--gold);
+  color: var(--text);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: var(--text);
+  padding: 3rem 1rem;
+  background: rgba(255,255,255,0.9);
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  .hero-photo img {
+    width: 160px;
+    height: 160px;
+    margin-left: 0;
+  }
+  section {
+    padding: 1.5rem;
+  }
+}
